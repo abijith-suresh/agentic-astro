@@ -1,3 +1,15 @@
+# Reference: GitHub Pages Deployment
+#
+# This workflow is provided as a reference implementation for deploying to
+# GitHub Pages. The primary deployment target for this project is Vercel
+# (see vercel.json at the repo root).
+#
+# To use GitHub Pages instead:
+#   1. Set `site` and `base` in astro.config.ts:
+#        site: "https://YOUR-USERNAME.github.io"
+#        base: "/YOUR-REPO-NAME/"
+#   2. Enable GitHub Pages in Settings → Pages → Source: GitHub Actions
+#   3. This workflow will trigger automatically on push to main.
 name: Deploy to GitHub Pages
 
 on:
@@ -26,7 +38,8 @@ jobs:
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
         with:
-          bun-version: latest
+          bun-version-file: ".bun-version"
+          cache: true
 
       - name: Setup Pages
         id: pages
