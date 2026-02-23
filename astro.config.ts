@@ -3,11 +3,9 @@ import { defineConfig } from "astro/config";
 
 // https://astro.build/config
 export default defineConfig({
-  // Update these after "Use this template":
-  site: "https://YOUR-USERNAME.github.io",
-  base: "/YOUR-PROJECT-NAME/",
   vite: {
-    plugins: [tailwindcss()],
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    plugins: [tailwindcss() as any],
     resolve: {
       alias: {
         "@": "/src",
