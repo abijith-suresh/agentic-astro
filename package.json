@@ -1,5 +1,5 @@
 {
-  "name": "astro-template",
+  "name": "agentic-astro",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "astro": "^5.17.3",
+    "geist": "^1.7.0",
     "tailwindcss": "^4.2.0"
   },
   "devDependencies": {

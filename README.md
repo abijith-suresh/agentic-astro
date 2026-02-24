@@ -1,10 +1,20 @@
-# astro-template
+# agentic-astro
 
-[![CI](https://github.com/abijith-suresh/astro-template/actions/workflows/ci.yml/badge.svg)](https://github.com/abijith-suresh/astro-template/actions/workflows/ci.yml)
+[![CI](https://github.com/abijith-suresh/agentic-astro/actions/workflows/ci.yml/badge.svg)](https://github.com/abijith-suresh/agentic-astro/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/abijith-suresh/astro-template)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/abijith-suresh/agentic-astro)
 
-An opinionated Astro 5 starter template with Tailwind CSS v4, TypeScript strict mode, ESLint, Prettier, Husky, commitlint, Vitest, DevContainer, and GitHub Actions.
+**The Astro 5 starter built for AI-assisted development.**
+
+AGENTS.md pre-wired. TypeScript strict. Linting, testing, and CI/CD ready from day one. Your AI coding agent hits the ground running.
+
+## Why Agentic?
+
+Most starters are built for humans who can read the README and figure things out. This one is built for an AI coding agent that needs zero ambiguity:
+
+- **AGENTS.md / CLAUDE.md** — project conventions are a first-class citizen, not an afterthought
+- **TypeScript strict mode** — your agent writes code that compiles first time
+- **Pre-commit quality gates** — Husky + commitlint + lint-staged enforce standards before CI
 
 ## Stack
 
@@ -31,8 +41,8 @@ Click the **"Use this template"** button at the top of this repo, then:
    ```
 3. Update `name` in `package.json`
 4. Update the `name` field in `.devcontainer/devcontainer.json`
-5. Copy `.env.example` to `.env` and fill in your values
-6. Replace `AGENTS.md` with project-specific instructions
+5. Update `astro.config.ts` with your `site` and `base` if deploying to GitHub Pages
+6. Replace `AGENTS.md` with project-specific instructions (or extend the existing one)
 
 ### Deploy to Vercel (recommended)
 
@@ -71,7 +81,7 @@ See [AGENTS.md](./AGENTS.md) for the full list of commands and project conventio
 ```
 src/
 ├── components/
-│   ├── Button.astro   # example Button component (primary/outline variants)
+│   ├── Button.astro   # Button component (primary/outline variants)
 │   └── Counter.astro  # vanilla JS interactive island
 ├── layouts/Layout.astro   # base HTML shell with OG/meta tags
 ├── pages/index.astro      # entry point / demo page
