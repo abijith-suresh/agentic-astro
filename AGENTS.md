@@ -1,4 +1,4 @@
-# Agent & Contributor Instructions
+# Agent & Contributor Instructions — agentic-astro
 
 This is the canonical instruction file for AI agents and contributors. `CLAUDE.md` is a symlink to this file.
 
@@ -6,7 +6,7 @@ This is the canonical instruction file for AI agents and contributors. `CLAUDE.m
 
 ## Project Overview
 
-This is an Astro 5 project using Tailwind CSS v4, TypeScript strict mode, and Bun as the package manager. The stack is intentionally minimal and opinionated to serve as a clean starting point.
+This is **agentic-astro** — an Astro 5 starter kit built for AI-assisted development. It uses Tailwind CSS v4, TypeScript strict mode, and Bun as the package manager. The stack is intentionally minimal and opinionated so that an AI coding agent can onboard instantly with zero ambiguity.
 
 ---
 
@@ -214,7 +214,7 @@ After clicking "Use this template" on GitHub:
 
 1. **Clone** the new repo locally
 2. **Install dependencies**: `bun install`
-3. **Update `package.json`**: change `name` from `"astro-template"` to your project name
+3. **Update `package.json`**: change `name` from `"agentic-astro"` to your project name
 4. **Update `astro.config.ts`**: set `site` and `base` for GitHub Pages
    ```ts
    site: "https://YOUR-USERNAME.github.io",
@@ -223,4 +223,4 @@ After clicking "Use this template" on GitHub:
 5. **Update `.devcontainer/devcontainer.json`**: change the `name` field
 6. **Enable GitHub Pages**: Settings → Pages → Source: GitHub Actions
 7. **Replace this AGENTS.md**: with project-specific instructions (or keep and extend)
-8. **Make initial commit**: `git commit -m "chore: init from astro-template"`
+8. **Make initial commit**: `git commit -m "chore: init from agentic-astro"`
