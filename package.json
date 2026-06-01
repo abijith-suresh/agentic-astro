@@ -21,27 +21,27 @@
   },
   "dependencies": {
     "astro": "^5.17.3",
-    "geist": "^1.7.0",
-    "tailwindcss": "^4.2.0"
+    "geist": "^1.7.1",
+    "tailwindcss": "^4.3.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^20.4.2",
     "@commitlint/config-conventional": "^20.4.2",
     "@eslint/js": "^10.0.1",
-    "@tailwindcss/vite": "^4.2.0",
+    "@tailwindcss/vite": "^4.3.0",
     "@testing-library/jest-dom": "^6.9.1",
-    "@vitest/ui": "^4.0.18",
-    "eslint": "^10.0.1",
+    "@vitest/ui": "^4.1.7",
+    "eslint": "^10.4.1",
     "eslint-config-prettier": "^10.1.8",
-    "eslint-plugin-astro": "^1.6.0",
+    "eslint-plugin-astro": "^1.7.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "husky": "^9.1.7",
     "jsdom": "^28.1.0",
     "lint-staged": "^16.2.7",
-    "prettier": "^3.8.1",
+    "prettier": "^3.8.3",
     "prettier-plugin-astro": "^0.14.1",
     "typescript": "^5.7.0",
-    "typescript-eslint": "^8.56.0",
-    "vitest": "^4.0.18"
+    "typescript-eslint": "^8.60.0",
+    "vitest": "^4.1.7"
   }
 }
