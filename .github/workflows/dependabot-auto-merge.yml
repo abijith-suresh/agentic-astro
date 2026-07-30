@@ -24,7 +24,7 @@ jobs:
         with:
           github-token: "${{ secrets.GITHUB_TOKEN }}"
 
-      # Patch & minor updates → always auto-merge
+      # Patch & minor updates → always auto-merge (safe by definition)
       - name: Auto-merge patch and minor updates
         if: >
           steps.metadata.outputs.update-type == 'version-update:semver-patch'
