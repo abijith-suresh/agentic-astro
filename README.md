@@ -12,7 +12,7 @@ AGENTS.md pre-wired. TypeScript strict. Linting, testing, and CI/CD ready from d
 
 Most starters are built for humans who can read the README and figure things out. This one is built for an AI coding agent that needs zero ambiguity:
 
-- **AGENTS.md / CLAUDE.md** — project conventions are a first-class citizen, not an afterthought
+- **AGENTS.md** — project conventions are a first-class citizen, not an afterthought
 - **TypeScript strict mode** — your agent writes code that compiles first time
 - **Pre-commit quality gates** — Husky + commitlint + lint-staged enforce standards before CI
 
@@ -22,8 +22,7 @@ Most starters are built for humans who can read the README and figure things out
 - [Tailwind CSS v4](https://tailwindcss.com) — utility-first CSS (via `@tailwindcss/vite`)
 - [TypeScript](https://www.typescriptlang.org) — strict mode
 - [Bun](https://bun.sh) — package manager and runtime
-- [ESLint](https://eslint.org) — linting (flat config)
-- [Prettier](https://prettier.io) — formatting
+- [Biome](https://biomejs.dev) — linting and formatting (one config, no ESLint/Prettier)
 - [Husky](https://typicode.github.io/husky) + [commitlint](https://commitlint.js.org) — git hooks
 - [Vitest](https://vitest.dev) — unit testing
 - [GitHub Actions](https://github.com/features/actions) — CI + deploy
@@ -69,8 +68,8 @@ See `.github/workflows/deploy.yml` for a reference implementation. You will need
 bun dev          # start dev server at localhost:4321
 bun build        # build for production
 bun preview      # preview production build
-bun run lint     # run ESLint
-bun run format   # run Prettier
+bun run lint     # run Biome lint
+bun run format   # run Biome format
 bun run test     # run tests
 ```
 

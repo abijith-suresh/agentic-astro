@@ -1,43 +1,43 @@
-# Agent Instructions — agentic-astro
+# agentic-astro — agent brief
 
-## Overview
+A minimal Astro starter template that other repos scaffold from — pre-wired so an AI coding agent hits the ground running.
 
-- `agentic-astro` is a minimal Astro starter for AI-assisted development.
-- Keep it opinionated, small, and easy for agents to understand.
+## The Project
 
-## Stack
+Core promise: a small, opinionated Astro + Tailwind CSS v4 + TypeScript-strict starter with agent conventions, lint/format, tests, git hooks, release automation, and CI wired up on first clone.
+Non-goals: framework-heavy abstractions, product features, or repo-specific opinions — the template stays generic.
+Status: template / maintenance — kept working and current, not actively developed.
 
-- Astro 5
-- Tailwind CSS v4
-- TypeScript strict mode
-- Bun
+## How I Work Here
 
-## Commands
+- Quality gate: `bun run verify` — type-check, lint, format check, tests, then build. Run it before handoff; the `pre-push` hook runs it too.
+- Commits: Conventional Commits; the allowed types live in `commitlint.config.ts`. Squash merges; branch from `main` and never commit to it directly.
+- This repo is a **starter template**: keep everything generic and unopinionated, small, and easy for an agent to understand. Do not fold project-specific behavior into it.
+- The package manager and runner is **Bun** (`bun install`, `bun run <script>`, `bunx`); toolchain versions are pinned in `.bun-version` / `.node-version`.
+- Import `src` through the `@/` alias, wired in `astro.config.ts` (Vite) and `tsconfig.json`; avoid relative `../../` climbs.
+- Linting and formatting are **Biome** (`biome.json`) — there is no ESLint or Prettier. `pre-commit` runs `lint-staged`, which applies `biome check --write` to staged files.
+- The template ships **no test files**, so `bun run test` passes trivially (`passWithNoTests` in `vitest.config.ts`). Vitest runs in jsdom with globals and jest-dom matchers.
+- Releases are automated by release-please: never hand-edit `CHANGELOG.md` or the `version` in `package.json`.
+- CI requires the `quality` and `pr-title` checks on pull requests — thin wrappers over the shared `abijith-suresh/workflows` reusable workflows.
 
-- Install deps: `bun install`
-- Dev server: `bun run dev`
-- Quality gate: `bun run verify`
-- Individual steps: `bun run type-check`, `bun run lint`, `bun run format:check`, `bun run test`, `bun run build`
+## Sources of Truth
 
-## Project Map
+| Fact | Where |
+|---|---|
+| Product intent | § The Project (this file) |
+| Runtime behavior | code + tests |
+| Commands & deps | package.json |
+| Commit rules | commitlint.config.ts |
 
-- `src/layouts/Layout.astro`: base layout
-- `src/pages/`: routed pages
-- `src/styles/global.css`: global styling and theme tokens
-- `src/test/setup.ts`: Vitest setup
+Code and tests are the authority; this file never overrides executable truth.
 
-## Hard Rules
+## Getting Around
 
-- Use the `@/` path alias for `src` imports.
-- Prefer small, obvious patterns over framework-heavy abstractions.
-- Keep the starter generic unless the user wants this repo specialized.
-
-## Git And CI
-
-- Branch from the latest `main` before starting changes.
-- Never commit directly to `main`.
-- Commit and PR titles must use Conventional Commits: `feat`, `fix`, `docs`, `refactor`, `chore`, `test`, `ci`.
-- Before push, run `bun run verify`.
-- `pre-commit` runs `lint-staged`, `commit-msg` runs `commitlint`, and `pre-push` runs `bun run verify`.
-- CI enforces `quality` and `pr-title` checks on pull requests.
-- Squash merge is the expected merge strategy.
+- `src/pages/` — routed pages; `index.astro` is the demo landing page.
+- `src/layouts/Layout.astro` — base HTML shell with meta/OG/canonical tags.
+- `src/components/` — `Button.astro` and `Counter.astro` (a vanilla-JS interactive island).
+- `src/styles/global.css` — Tailwind entry, Geist font faces, and `@theme` tokens.
+- `src/test/setup.ts` — Vitest setup (jest-dom matchers).
+- `astro.config.ts`, `tsconfig.json`, `biome.json`, `vitest.config.ts` — tooling config.
+- `.github/workflows/` — CI and PR-title checks; `.husky/` — git hooks.
+- `.devcontainer/` — reproducible dev environment; `vercel.json` — deploy target (GitHub Pages is a documented alternative).
